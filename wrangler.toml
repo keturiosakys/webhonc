@@ -3,6 +3,18 @@ name = "webhonc"
 main = "src/index.ts"
 compatibility_date = "2024-07-01"
 
+[dev]
+port = 3000
+
+
+[[durable_objects.bindings]]
+name = "WEBHONC"
+class_name = "WebHonc"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["WebHonc"]
+
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
